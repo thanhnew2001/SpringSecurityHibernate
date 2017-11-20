@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by CoT on 11/18/17.
  */
-@Service("customUserDetailsService")
+@Service
 public class CustomUserDetailsService implements UserDetailsService {
 
 

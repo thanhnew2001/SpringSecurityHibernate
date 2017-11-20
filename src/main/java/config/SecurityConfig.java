@@ -22,8 +22,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
     @Autowired
+    private CustomUserDetailsService userDetailsService;
+
+    @Autowired
     public void setupAuthenticationBuilder(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(new CustomUserDetailsService());
+        auth.userDetailsService(userDetailsService);
     }
 
     @Override
