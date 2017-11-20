@@ -1,5 +1,7 @@
 config/SpringSecurityInitializer.class
+config/CustomUserDetailsService$1.class
 config/SecurityConfig.class
+config/CustomUserDetailsService.class
 config/WebAppInitializer.class
 controller/StudentController.class
 config/AppConfig.class
