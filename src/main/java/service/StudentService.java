@@ -1,6 +1,7 @@
 package service;
 
 import model.Student;
+import model.UserRole;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class StudentService {
 
     @Transactional
     public Student getStudent(int id){
-        Query query = sessionFactory.getCurrentSession().createQuery("from Student where id:id");
+        Query query = sessionFactory.getCurrentSession().createQuery("from Student where id=:id");
         query.setInteger("id", id);
 
         return (Student) query.uniqueResult();
@@ -38,7 +39,13 @@ public class StudentService {
     public List<Student> getAllStudents(){
         Query query = sessionFactory.getCurrentSession().createQuery("from Student");
         return query.list();
+    }
 
+    @Transactional
+    public List<UserRole> getUserRoleByUser(String username){
+        Query query = sessionFactory.getCurrentSession().createQuery("from UserRole where user.name=:username");
+        query.setString("username", username);
+        return query.list();
     }
 
 

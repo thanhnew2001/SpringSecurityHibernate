@@ -1,9 +1,13 @@
+config/CustomUserDetailsService.class
+controller/LecturerController.class
+model/UserRole.class
+controller/StudentController.class
+model/Role.class
 config/SpringSecurityInitializer.class
 config/CustomUserDetailsService$1.class
 config/SecurityConfig.class
-config/CustomUserDetailsService.class
 config/WebAppInitializer.class
-controller/StudentController.class
+model/User.class
 config/AppConfig.class
 model/Student.class
 service/StudentService.class
